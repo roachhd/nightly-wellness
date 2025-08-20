@@ -1,133 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nightly Bedtime Wellness</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightly Bedtime Wellness</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-content">
-        <h1 class="app-title">
-          <span class="moon-icon">🌙</span>
-          Nightly Bedtime Wellness
-        </h1>
-        <p class="current-date" id="currentDate"></p>
-      </div>
-    </header>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <span class="moon-icon">🌙</span>
+                    Nightly Bedtime Wellness
+                </h1>
+                <p class="current-date" id="currentDate"></p>
+            </div>
+        </header>
 
-    <!-- Main -->
-    <main class="main-content">
-      <div class="generate-section">
-        <button class="btn btn--primary generate-btn" id="generateBtn">
-          <span class="stars-icon">✨</span>
-          Generate Tonight's Wellness
-        </button>
-      </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="generate-section">
+                <button class="btn btn--primary generate-btn" id="generateBtn">
+                    <span class="stars-icon">✨</span>
+                    Generate Tonight's Wellness
+                </button>
+            </div>
 
-      <!-- Grid -->
-      <div class="wellness-grid">
-        <!-- Calming Quote -->
-        <div class="wellness-card quote-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-icon">💫</span>
-              Tonight's Calming Quote
-            </h2>
-          </div>
-          <div class="card-content">
-            <blockquote class="quote" id="tonightQuote">
-              "The night is the balm that soothes my weary soul."
-            </blockquote>
-          </div>
-        </div>
+            <!-- Wellness Cards Grid -->
+            <div class="wellness-grid">
+                <!-- Calming Quote Card -->
+                <div class="wellness-card quote-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="card-icon">💫</span>
+                            Tonight's Calming Quote
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <blockquote class="quote" id="tonightQuote">
+                            "The night is the balm that soothes my weary soul."
+                        </blockquote>
+                    </div>
+                </div>
 
-        <!-- Journal Reflection -->
-        <div class="wellness-card journal-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-icon">📝</span>
-              Journal Reflection
-            </h2>
-          </div>
-          <div class="card-content">
-            <p class="journal" id="journalPrompt">
-              What was one moment today when you felt completely present? Describe it in vivid detail.
-            </p>
-          </div>
-        </div>
+                <!-- Journal Reflection Card -->
+                <div class="wellness-card journal-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="card-icon">📝</span>
+                            Journal Reflection
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="journal" id="journalPrompt">
+                            What was one moment today when you felt completely present? Describe it in vivid detail.
+                        </p>
+                    </div>
+                </div>
 
-        <!-- Wellness Insight -->
-        <div class="wellness-card insight-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-icon">🌿</span>
-              Wellness Insight
-            </h2>
-          </div>
-          <div class="card-content">
-            <p class="insight" id="wellnessInsight">
-              Your body temperature naturally drops 1–2 degrees before sleep--this is why a cool bedroom supports better rest.
-            </p>
-          </div>
-        </div>
+                <!-- Wellness Insight Card -->
+                <div class="wellness-card insight-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="card-icon">🌿</span>
+                            Wellness Insight
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="insight" id="wellnessInsight">
+                            Your body temperature naturally drops 1–2 degrees before sleep--this is why a cool bedroom supports better rest.
+                        </p>
+                    </div>
+                </div>
 
-        <!-- Mind-Clearing Technique -->
-        <div class="wellness-card technique-card">
-          <div class="card-header">
-            <h2 class="card-title">
-              <span class="card-icon">🧘</span>
-              Mind-Clearing Technique
-            </h2>
-          </div>
-          <div class="card-content">
-            <p class="technique" id="mindClearing">
-              Body Scan: Starting with your toes, slowly bring awareness to each part of your body, releasing tension as you breathe out.
-            </p>
-          </div>
-        </div>
-      </div>
+                <!-- Mind-Clearing Technique Card -->
+                <div class="wellness-card technique-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="card-icon">🧘</span>
+                            Mind-Clearing Technique
+                        </h2>
+                    </div>
+                    <div class="card-content">
+                        <p class="technique" id="mindClearing">
+                            Body Scan: Starting with your toes, slowly bring awareness to each part of your body, releasing tension as you breathe out.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Bedtime Routine -->
-      <section class="routine">
-        <button class="routine-toggle" id="routineToggle" aria-expanded="false">
-          <span class="routine-icon">🛏️</span>
-          Your Bedtime Routine Guide
-          <span class="chevron" id="chevron">▸</span>
-        </button>
-        <div class="routine-panel" id="routinePanel" hidden>
-          <h3 class="routine-title">Your Optimal Bedtime Routine</h3>
-          <p class="routine-timeframe">Timeframe: 1–2 hours before desired sleep time</p>
-          <ul class="routine-steps">
-            <li>2 hours before bed: Finish eating and avoid alcohol. Begin dimming lights throughout your home.</li>
-            <li>1.5 hours before bed: Turn off screens or use blue light filters. Begin your wind-down activities.</li>
-            <li>1 hour before bed: Create a calming environment--cool temperature (18–20°C), blackout curtains, minimal noise.</li>
-            <li>45 minutes before bed: Try gentle activities like reading, stretching, a warm bath, or herbal tea.</li>
-            <li>30 minutes before bed: Practice mindfulness, journaling, or relaxation techniques.</li>
-            <li>15 minutes before bed: Final preparations--comfortable sleepwear, tidy bedroom, set intentions for rest.</li>
-            <li>In bed: Use progressive relaxation, breathing exercises, or peaceful visualization to transition into sleep.</li>
-          </ul>
-          <h4 class="routine-subtitle">Key Principles</h4>
-          <ul class="routine-principles">
-            <li>Consistency: Start your routine at the same time each night.</li>
-            <li>Gentleness: This is time for self-care, not productivity.</li>
-            <li>Environment: Your bedroom should signal rest to all your senses.</li>
-            <li>Mindfulness: Stay present rather than planning tomorrow or reviewing today.</li>
-            <li>Patience: Allow your body time to naturally shift into sleep mode.</li>
-          </ul>
-        </div>
-      </section>
-    </main>
+            <!-- Bedtime Routine Section (Expandable) -->
+            <section class="routine">
+                <button class="routine-toggle" id="routineToggle" aria-expanded="false">
+                    <span class="routine-icon">🛏️</span>
+                    Your Bedtime Routine Guide
+                    <span class="chevron" id="chevron">▸</span>
+                </button>
+                <div class="routine-panel" id="routinePanel" hidden>
+                    <h3 class="routine-title">Your Optimal Bedtime Routine</h3>
+                    <p class="routine-timeframe">Timeframe: 1–2 hours before desired sleep time</p>
+                    <ul class="routine-steps">
+                        <li>2 hours before bed: Finish eating and avoid alcohol. Begin dimming lights throughout your home.</li>
+                        <li>1.5 hours before bed: Turn off screens or use blue light filters. Begin your wind-down activities.</li>
+                        <li>1 hour before bed: Create a calming environment--cool temperature (18–20°C), blackout curtains, minimal noise.</li>
+                        <li>45 minutes before bed: Try gentle activities like reading, stretching, warm bath, or herbal tea.</li>
+                        <li>30 minutes before bed: Practice mindfulness, journaling, or relaxation techniques.</li>
+                        <li>15 minutes before bed: Final preparations--comfortable sleepwear, bedroom setup, set intentions for rest.</li>
+                        <li>In bed: Use progressive relaxation, breathing exercises, or peaceful visualization to transition into sleep.</li>
+                    </ul>
+                    <h4 class="routine-subtitle">Key Principles</h4>
+                    <ul class="routine-principles">
+                        <li>Consistency: Try to start your routine at the same time each night</li>
+                        <li>Gentleness: This is time for self-care, not productivity</li>
+                        <li>Environment: Your bedroom should signal rest to all your senses</li>
+                        <li>Mindfulness: Stay present rather than planning tomorrow or reviewing today</li>
+                        <li>Patience: Allow your body time to naturally shift into sleep mode</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Made with calm and care. 🌙</p>
-    </footer>
-  </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with calm and care. 🌙</p>
+        </footer>
+    </div>
 
-  <script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
-// Nightly Bedtime Wellness App
-
+// Bedtime Wellness App JavaScript
 class BedtimeWellnessApp {
   constructor() {
     this.quotes = [
@@ -61,45 +60,45 @@ class BedtimeWellnessApp {
     this.wellnessInsights = [
       "Your body temperature naturally drops 1–2 degrees before sleep--this is why a cool bedroom (18–20°C) supports better rest.",
       "Blue light exposure can suppress melatonin production for up to 3 hours, making it harder to fall asleep naturally.",
-      "Deep breathing activates your parasympathetic nervous system, shifting your body from ‘fight or flight’ to ‘rest and digest’.",
-      "Writing down tomorrow's to-do list before bed can reduce bedtime worry significantly in many people.",
+      "Deep breathing activates your parasympathetic nervous system, naturally shifting your body from 'fight or flight' to 'rest and digest' mode.",
+      "Writing down tomorrow's to-do list before bed can reduce bedtime worry by 57%, according to sleep research.",
       "Your brain clears toxins during deep sleep through the glymphatic system--like taking out the trash while you rest.",
       "Lavender scent can reduce heart rate and blood pressure, creating optimal conditions for sleep.",
-      "Consistent sleep and wake times help regulate your circadian rhythm over time.",
-      "Progressive muscle relaxation can reduce the time it takes to fall asleep for many sleepers.",
-      "Gratitude practices before bed can improve sleep quality and reduce rumination.",
-      "Use your bedroom only for sleep and intimacy to strengthen mental associations with rest.",
+      "Consistent sleep and wake times help regulate your circadian rhythm, making it easier to fall asleep naturally over time.",
+      "Progressive muscle relaxation can reduce the time it takes to fall asleep by up to 50%.",
+      "Gratitude practices before bed increase sleep quality and reduce the time spent worrying at night.",
+      "Your bedroom should ideally be used only for sleep and intimacy--this creates stronger mental associations with rest.",
       "Magnesium supports muscle relaxation and can help calm an overactive mind before sleep.",
-      "The 4-7-8 breathing technique can trigger your body's relaxation response in minutes.",
+      "The 4-7-8 breathing technique (inhale 4, hold 7, exhale 8) can trigger your body's relaxation response in minutes.",
       "Weighted blankets provide deep pressure touch that can reduce cortisol and increase serotonin and melatonin.",
-      "Visualization and guided imagery can help ease sleep difficulties for some.",
-      "Night mode isn’t enough--blue light blockers or avoiding screens entirely work better close to bedtime.",
+      "Visualization and guided imagery can be as effective as medication for some people with sleep difficulties.",
+      "Your phone's night mode isn't enough--blue light blockers or avoiding screens entirely work better for sleep preparation.",
       "Herbal teas like chamomile contain compounds that bind to brain receptors and promote sleepiness.",
-      "Body scanning meditation helps release physical tension you might not realize you’re holding.",
-      "Creating a ‘worry window’ earlier in the day can prevent anxious thoughts from disrupting bedtime.",
+      "Body scanning meditation helps release physical tension you might not even realize you're holding.",
+      "Creating a 'worry window' earlier in the day can prevent anxious thoughts from disrupting your bedtime.",
       "Sleep is when your brain consolidates memories and processes emotions from the day.",
       "Gentle stretching or yoga before bed can signal to your nervous system that it's time to wind down.",
-      "Visualizing nature scenes can lower stress hormones and promote sleep.",
+      "The Japanese practice of 'forest bathing' or visualizing nature scenes can lower stress hormones and promote sleep.",
       "Aromatherapy works because scent is directly connected to the emotional centers of your brain.",
-      "Engage all five senses: cool temperature, dark room, comfortable textures, pleasant scents, and calming sounds."
+      "Your sleep environment should engage all five senses: cool temperature, dark lighting, comfortable textures, pleasant scents, and calming sounds."
     ];
 
     this.mindClearingTechniques = [
       "Body Scan: Starting with your toes, slowly bring awareness to each part of your body, releasing tension as you breathe out.",
-      "4-7-8 Breathing: Inhale for 4 counts, hold for 7, exhale for 8. Repeat 3–4 times.",
-      "5-4-3-2-1 Grounding: 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste.",
-      "Loving-Kindness Visualization: Picture someone you love and imagine sending them peaceful, warm feelings. Include yourself.",
-      "Mental Snow Globe: Imagine thoughts as snowflakes in a globe. Watch them swirl, then settle.",
-      "Peaceful Place Visualization: Picture your ideal calm location in vivid detail--temperature, sounds, and scent.",
-      "Progressive Muscle Relaxation: Tense each muscle group for 5 seconds, then release, moving from feet to head.",
+      "4-7-8 Breathing: Inhale for 4 counts, hold for 7, exhale for 8. Repeat 3–4 times to activate your relaxation response.",
+      "5-4-3-2-1 Grounding: Notice 5 things you can see, 4 things you can touch, 3 things you can hear, 2 things you can smell, 1 thing you can taste.",
+      "Loving-Kindness Visualization: Picture someone you love and imagine sending them peaceful, warm feelings. Include yourself in this loving energy.",
+      "Mental Snow Globe: Imagine your worrying thoughts as snowflakes in a snow globe. Watch them swirl, then slowly settle as your mind becomes calm.",
+      "Peaceful Place Visualization: Picture your ideal calm location in vivid detail--feel the temperature, hear the sounds, smell the air.",
+      "Progressive Muscle Relaxation: Tense each muscle group for 5 seconds, then release. Start with your feet and work up to your head.",
       "Counting Meditation: Count slowly backwards from 100. If your mind wanders, gently return to counting.",
-      "Breath Awareness: Focus on the sensation of breathing. Notice the rise and fall without changing it.",
-      "Color Breathing: Breathe in a calming color, breathe out tension as a different color.",
-      "Mantra Repetition: Silently repeat a calming word or phrase like "peace," "calm," or "let go."",
-      "River of Thoughts: Visualize your thoughts as leaves floating down a river. Watch them pass.",
-      "Heart Coherence: Hand on heart, breathe slowly while focusing on appreciation and calm.",
-      "Three-Part Breathing: Breathe into belly, then ribs, then chest. Exhale releasing chest, ribs, belly.",
-      "Mindful Body Release: With each exhale, imagine sinking deeper into your mattress."
+      "Breath Awareness: Simply focus on the sensation of breathing without changing it. Notice the rise and fall of your chest.",
+      "Color Breathing: Imagine breathing in a calming color (like blue or green) and breathing out tension as a different color.",
+      "Mantra Repetition: Silently repeat a calming word or phrase like 'peace,' 'calm,' or 'let go' with each breath.",
+      "River of Thoughts: Visualize your thoughts as leaves floating down a river. Watch them pass without engaging with them.",
+      "Heart Coherence: Place your hand on your heart and breathe slowly while focusing on feelings of appreciation and calm.",
+      "Three-Part Breathing: Breathe into your belly, then ribs, then chest. Exhale slowly, releasing each area in reverse order.",
+      "Mindful Body Release: With each exhale, imagine sinking deeper into your mattress, releasing the weight of the day."
     ];
   }
 
@@ -139,6 +138,7 @@ class BedtimeWellnessApp {
     const btn = document.getElementById("generateBtn");
     btn.addEventListener("click", () => this.generateTonight());
 
+    // Expand/collapse routine panel (dropdown-like behavior)
     const toggle = document.getElementById("routineToggle");
     const panel = document.getElementById("routinePanel");
     const chevron = document.getElementById("chevron");

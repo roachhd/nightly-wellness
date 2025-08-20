@@ -1,4 +1,5 @@
 :root {
+  /* Theme colors */
   --bg-start: #0b1226;
   --bg-end: #2a1a4e;
   --card: #1a1f35;
@@ -15,9 +16,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(1000px 700px at 20% 10%, #152042, transparent),
-              radial-gradient(800px 600px at 80% 0%, #341a5f, transparent),
-              linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  background:
+    radial-gradient(1000px 700px at 20% 10%, #152042, transparent),
+    radial-gradient(800px 600px at 80% 0%, #341a5f, transparent),
+    linear-gradient(180deg, var(--bg-start), var(--bg-end));
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
@@ -104,8 +106,9 @@ html, body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(600px 200px at 10% -10%, rgba(255,255,255,0.06), transparent 40%),
-              radial-gradient(600px 200px at 110% 110%, rgba(255,255,255,0.05), transparent 50%);
+  background:
+    radial-gradient(600px 200px at 10% -10%, rgba(255,255,255,0.06), transparent 40%),
+    radial-gradient(600px 200px at 110% 110%, rgba(255,255,255,0.05), transparent 50%);
   pointer-events: none;
 }
 
