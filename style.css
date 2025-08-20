@@ -1,0 +1,208 @@
+:root {
+  --bg-start: #0b1226;
+  --bg-end: #2a1a4e;
+  --card: #1a1f35;
+  --card-alt: #1d233b;
+  --text: #e9ecf6;
+  --muted: #b9c0d9;
+  --accent: #b9a7ff;
+  --accent-2: #ffd08a;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(1000px 700px at 20% 10%, #152042, transparent),
+              radial-gradient(800px 600px at 80% 0%, #341a5f, transparent),
+              linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 8px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 2px 10px rgba(185, 167, 255, 0.15);
+}
+
+.current-date {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.moon-icon { filter: drop-shadow(0 2px 6px rgba(255,255,255,0.15)); }
+
+.main-content { margin-top: 12px; }
+
+.generate-section {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 22px;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #3a2f73, #6d45c1);
+  color: white;
+  box-shadow: 0 6px 20px rgba(109, 69, 193, 0.35);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(109, 69, 193, 0.45);
+  filter: brightness(1.05);
+}
+
+.btn:active { transform: translateY(0); }
+
+.wellness-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.wellness-card {
+  grid-column: span 12;
+  background: linear-gradient(180deg, var(--card), var(--card-alt));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px var(--shadow);
+  padding: 16px 18px;
+  overflow: hidden;
+  position: relative;
+}
+
+.wellness-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px 200px at 10% -10%, rgba(255,255,255,0.06), transparent 40%),
+              radial-gradient(600px 200px at 110% 110%, rgba(255,255,255,0.05), transparent 50%);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  color: var(--accent);
+}
+
+.card-icon { filter: drop-shadow(0 1px 4px rgba(185,167,255,0.35)); }
+
+.card-content {
+  min-height: 72px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.quote {
+  font-size: 20px;
+  margin: 6px 0 2px;
+  line-height: 1.5;
+  color: #f0f2fb;
+}
+
+.journal, .insight, .technique {
+  margin: 6px 0 2px;
+  color: var(--text);
+}
+
+.routine {
+  margin: 22px 0 8px;
+}
+
+.routine-toggle {
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(180deg, #1b2240, #202755);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.routine-panel {
+  margin-top: 10px;
+  padding: 16px;
+  background: linear-gradient(180deg, #171c34, #1a2040);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.routine-title { margin: 0 0 4px; color: var(--accent-2); }
+.routine-timeframe { margin: 0 0 10px; color: var(--muted); }
+
+.routine-steps, .routine-principles {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.footer {
+  margin-top: 26px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (min-width: 680px) {
+  .wellness-card { grid-column: span 6; }
+}
+
+@media (min-width: 980px) {
+  .wellness-card { grid-column: span 6; }
+  .quote-card, .insight-card { grid-column: span 6; }
+  .journal-card, .technique-card { grid-column: span 6; }
+}
