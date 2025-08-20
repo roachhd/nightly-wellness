@@ -54,7 +54,7 @@
                         </h2>
                     </div>
                     <div class="card-content">
-                        <p class="journal" id="journalPrompt">
+                        <p class="journal-prompt" id="journalPrompt">
                             What was one moment today when you felt completely present? Describe it in vivid detail.
                         </p>
                     </div>
@@ -64,13 +64,13 @@
                 <div class="wellness-card insight-card">
                     <div class="card-header">
                         <h2 class="card-title">
-                            <span class="card-icon">🌿</span>
+                            <span class="card-icon">💡</span>
                             Wellness Insight
                         </h2>
                     </div>
                     <div class="card-content">
-                        <p class="insight" id="wellnessInsight">
-                            Your body temperature naturally drops 1–2 degrees before sleep--this is why a cool bedroom supports better rest.
+                        <p class="wellness-tip" id="wellnessTip">
+                            Your body temperature naturally drops 1-2 degrees before sleep - this is why a cool bedroom (65-68°F) supports better rest.
                         </p>
                     </div>
                 </div>
@@ -79,53 +79,59 @@
                 <div class="wellness-card technique-card">
                     <div class="card-header">
                         <h2 class="card-title">
-                            <span class="card-icon">🧘</span>
+                            <span class="card-icon">🧘‍♀️</span>
                             Mind-Clearing Technique
                         </h2>
                     </div>
                     <div class="card-content">
-                        <p class="technique" id="mindClearing">
+                        <p class="technique" id="mindTechnique">
                             Body Scan: Starting with your toes, slowly bring awareness to each part of your body, releasing tension as you breathe out.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Bedtime Routine Section (Expandable) -->
-            <section class="routine">
+            <!-- Bedtime Routine Section -->
+            <section class="bedtime-routine-section">
                 <button class="routine-toggle" id="routineToggle" aria-expanded="false">
-                    <span class="routine-icon">🛏️</span>
-                    Your Bedtime Routine Guide
-                    <span class="chevron" id="chevron">▸</span>
+                    <span class="toggle-icon">🌛</span>
+                    <span class="toggle-text">Your Bedtime Routine Guide</span>
+                    <span class="arrow" id="routineArrow">▼</span>
                 </button>
-                <div class="routine-panel" id="routinePanel" hidden>
-                    <h3 class="routine-title">Your Optimal Bedtime Routine</h3>
-                    <p class="routine-timeframe">Timeframe: 1–2 hours before desired sleep time</p>
-                    <ul class="routine-steps">
-                        <li>2 hours before bed: Finish eating and avoid alcohol. Begin dimming lights throughout your home.</li>
-                        <li>1.5 hours before bed: Turn off screens or use blue light filters. Begin your wind-down activities.</li>
-                        <li>1 hour before bed: Create a calming environment--cool temperature (18–20°C), blackout curtains, minimal noise.</li>
-                        <li>45 minutes before bed: Try gentle activities like reading, stretching, warm bath, or herbal tea.</li>
-                        <li>30 minutes before bed: Practice mindfulness, journaling, or relaxation techniques.</li>
-                        <li>15 minutes before bed: Final preparations--comfortable sleepwear, bedroom setup, set intentions for rest.</li>
-                        <li>In bed: Use progressive relaxation, breathing exercises, or peaceful visualization to transition into sleep.</li>
-                    </ul>
-                    <h4 class="routine-subtitle">Key Principles</h4>
-                    <ul class="routine-principles">
-                        <li>Consistency: Try to start your routine at the same time each night</li>
-                        <li>Gentleness: This is time for self-care, not productivity</li>
-                        <li>Environment: Your bedroom should signal rest to all your senses</li>
-                        <li>Mindfulness: Stay present rather than planning tomorrow or reviewing today</li>
-                        <li>Patience: Allow your body time to naturally shift into sleep mode</li>
-                    </ul>
+                
+                <div class="routine-content" id="routineContent">
+                    <div class="routine-inner">
+                        <div class="routine-timeframe">
+                            <h3>Optimal timing: 1-2 hours before desired sleep time</h3>
+                        </div>
+                        
+                        <div class="routine-steps">
+                            <h4>Your Evening Steps:</h4>
+                            <ol class="steps-list">
+                                <li><strong>2 hours before bed:</strong> Finish eating and avoid alcohol. Begin dimming lights throughout your home.</li>
+                                <li><strong>1.5 hours before bed:</strong> Turn off screens or use blue light filters. Begin your wind-down activities.</li>
+                                <li><strong>1 hour before bed:</strong> Create a calming environment - cool temperature (65-68°F), blackout curtains, minimal noise.</li>
+                                <li><strong>45 minutes before bed:</strong> Try gentle activities like reading, stretching, warm bath, or herbal tea.</li>
+                                <li><strong>30 minutes before bed:</strong> Practice mindfulness, journaling, or relaxation techniques.</li>
+                                <li><strong>15 minutes before bed:</strong> Final preparations - comfortable sleepwear, bedroom setup, set intentions for rest.</li>
+                                <li><strong>In bed:</strong> Use progressive relaxation, breathing exercises, or peaceful visualization to transition into sleep.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="routine-principles">
+                            <h4>Key Principles:</h4>
+                            <ul class="principles-list">
+                                <li><strong>Consistency:</strong> Try to start your routine at the same time each night</li>
+                                <li><strong>Gentleness:</strong> This is time for self-care, not productivity</li>
+                                <li><strong>Environment:</strong> Your bedroom should signal rest to all your senses</li>
+                                <li><strong>Mindfulness:</strong> Stay present rather than planning tomorrow or reviewing today</li>
+                                <li><strong>Patience:</strong> Allow your body time to naturally shift into sleep mode</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Made with calm and care. 🌙</p>
-        </footer>
     </div>
 
     <script src="app.js"></script>
