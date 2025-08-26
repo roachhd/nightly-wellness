@@ -3,135 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nightly Bedtime Wellness</title>
+    <title>Nightly Mindful Wellness</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
+    <div class="container">
         <!-- Header Section -->
         <header class="header">
-            <div class="header-content">
-                <h1 class="app-title">
-                    <span class="moon-icon">🌙</span>
-                    Nightly Bedtime Wellness
-                </h1>
-                <p class="current-date" id="currentDate"></p>
-            </div>
+            <div class="stars-decoration">✨</div>
+            <h1 class="header__title">Nightly Mindful Wellness</h1>
+            <p class="header__subtitle">Your Evening Sanctuary for Rest & Reflection</p>
+            <p class="header__date" id="currentDate"></p>
+            <div class="stars-decoration">🌙</div>
         </header>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="generate-section">
-                <button class="btn btn--primary generate-btn" id="generateBtn">
-                    <span class="stars-icon">✨</span>
-                    Generate Tonight's Wellness
-                </button>
+        <!-- Refresh Button -->
+        <div class="refresh-section">
+            <button class="btn btn--primary refresh-btn" id="refreshBtn">
+                <span>✨</span> Refresh Tonight's Content
+            </button>
+        </div>
+
+        <!-- Calming Quote Section -->
+        <section class="content-section quote-section">
+            <div class="section-icon">💫</div>
+            <h2 class="section-title">Tonight's Inspiration</h2>
+            <div class="quote-container">
+                <blockquote class="quote-text" id="quoteText"></blockquote>
+                <cite class="quote-author" id="quoteAuthor"></cite>
             </div>
+        </section>
 
-            <!-- Wellness Cards Grid -->
-            <div class="wellness-grid">
-                <!-- Calming Quote Card -->
-                <div class="wellness-card quote-card">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <span class="card-icon">💫</span>
-                            Tonight's Calming Quote
-                        </h2>
-                    </div>
-                    <div class="card-content">
-                        <blockquote class="quote" id="tonightQuote">
-                            "The night is the balm that soothes my weary soul."
-                        </blockquote>
-                    </div>
-                </div>
-
-                <!-- Journal Reflection Card -->
-                <div class="wellness-card journal-card">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <span class="card-icon">📝</span>
-                            Journal Reflection
-                        </h2>
-                    </div>
-                    <div class="card-content">
-                        <p class="journal-prompt" id="journalPrompt">
-                            What was one moment today when you felt completely present? Describe it in vivid detail.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Wellness Insight Card -->
-                <div class="wellness-card insight-card">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <span class="card-icon">💡</span>
-                            Wellness Insight
-                        </h2>
-                    </div>
-                    <div class="card-content">
-                        <p class="wellness-tip" id="wellnessTip">
-                            Your body temperature naturally drops 1-2 degrees before sleep - this is why a cool bedroom (65-68°F) supports better rest.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Mind-Clearing Technique Card -->
-                <div class="wellness-card technique-card">
-                    <div class="card-header">
-                        <h2 class="card-title">
-                            <span class="card-icon">🧘‍♀️</span>
-                            Mind-Clearing Technique
-                        </h2>
-                    </div>
-                    <div class="card-content">
-                        <p class="technique" id="mindTechnique">
-                            Body Scan: Starting with your toes, slowly bring awareness to each part of your body, releasing tension as you breathe out.
-                        </p>
-                    </div>
+        <!-- Journal Prompt Section -->
+        <section class="content-section journal-section">
+            <div class="section-icon">🌸</div>
+            <h2 class="section-title">Tonight's Reflection</h2>
+            <div class="prompt-container">
+                <p class="prompt-text" id="promptText"></p>
+                <div class="journal-input-container">
+                    <textarea 
+                        class="form-control journal-textarea" 
+                        id="journalInput"
+                        placeholder="Write your thoughts here... (This is private and won't be saved)"
+                        rows="4"
+                    ></textarea>
+                    <p class="privacy-note">Your reflections are private and stay only with you</p>
                 </div>
             </div>
+        </section>
 
-            <!-- Bedtime Routine Section -->
-            <section class="bedtime-routine-section">
-                <button class="routine-toggle" id="routineToggle" aria-expanded="false">
-                    <span class="toggle-icon">🌛</span>
-                    <span class="toggle-text">Your Bedtime Routine Guide</span>
-                    <span class="arrow" id="routineArrow">▼</span>
-                </button>
-                
-                <div class="routine-content" id="routineContent">
-                    <div class="routine-inner">
-                        <div class="routine-timeframe">
-                            <h3>Optimal timing: 1-2 hours before desired sleep time</h3>
-                        </div>
-                        
-                        <div class="routine-steps">
-                            <h4>Your Evening Steps:</h4>
-                            <ol class="steps-list">
-                                <li><strong>2 hours before bed:</strong> Finish eating and avoid alcohol. Begin dimming lights throughout your home.</li>
-                                <li><strong>1.5 hours before bed:</strong> Turn off screens or use blue light filters. Begin your wind-down activities.</li>
-                                <li><strong>1 hour before bed:</strong> Create a calming environment - cool temperature (65-68°F), blackout curtains, minimal noise.</li>
-                                <li><strong>45 minutes before bed:</strong> Try gentle activities like reading, stretching, warm bath, or herbal tea.</li>
-                                <li><strong>30 minutes before bed:</strong> Practice mindfulness, journaling, or relaxation techniques.</li>
-                                <li><strong>15 minutes before bed:</strong> Final preparations - comfortable sleepwear, bedroom setup, set intentions for rest.</li>
-                                <li><strong>In bed:</strong> Use progressive relaxation, breathing exercises, or peaceful visualization to transition into sleep.</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="routine-principles">
-                            <h4>Key Principles:</h4>
-                            <ul class="principles-list">
-                                <li><strong>Consistency:</strong> Try to start your routine at the same time each night</li>
-                                <li><strong>Gentleness:</strong> This is time for self-care, not productivity</li>
-                                <li><strong>Environment:</strong> Your bedroom should signal rest to all your senses</li>
-                                <li><strong>Mindfulness:</strong> Stay present rather than planning tomorrow or reviewing today</li>
-                                <li><strong>Patience:</strong> Allow your body time to naturally shift into sleep mode</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <!-- Wellness Spark Section -->
+        <section class="content-section wellness-section">
+            <div class="section-icon">💡</div>
+            <h2 class="section-title">Wellness Spark</h2>
+            <div class="wellness-container">
+                <p class="wellness-text" id="wellnessText"></p>
+            </div>
+        </section>
+
+        <!-- Mind-Clearing Technique Section -->
+        <section class="content-section technique-section">
+            <div class="section-icon">🧘‍♀️</div>
+            <h2 class="section-title">Clear Your Mind</h2>
+            <div class="technique-container">
+                <h3 class="technique-name" id="techniqueName"></h3>
+                <ol class="technique-steps" id="techniqueSteps"></ol>
+            </div>
+        </section>
+
+        <!-- Bedtime Routine Section -->
+        <section class="content-section routine-section">
+            <div class="section-icon">🌜</div>
+            <h2 class="section-title">Your Ideal Bedtime Routine</h2>
+            <div class="routine-container">
+                <p class="routine-timeframe" id="routineTimeframe"></p>
+                <div class="routine-steps" id="routineSteps"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Sweet dreams and peaceful rest 🌙✨</p>
+        </footer>
     </div>
 
     <script src="app.js"></script>
